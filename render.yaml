@@ -1,0 +1,14 @@
+# render.yaml
+services:
+  web:
+    type: web
+    env:
+      AWS_ACCESS_KEY_ID: eWMUdzpgsK4aRiTy
+      AWS_SECRET_ACCESS_KEY: eATdrAbt2SzxWP9zXjcJsy95lE0u2jpxweIvvMUs
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    port: 3000
+    static_dir: public
+    dependencies:
+      - name: multer
+        version: '^1.4.4' 
